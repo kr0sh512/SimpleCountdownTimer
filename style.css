@@ -1,0 +1,176 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
+/* need a monospace for clock */
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F9F1F8;
+}
+
+body {
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 20rem;
+}
+
+@media screen and (orientation:portrait) {
+    html {
+        font-size: 6px;
+    }
+
+    body {
+        padding: 5vmin;
+    }
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+}
+
+.card button {
+    box-sizing: border-box;
+    width: 15%;
+    margin: auto;
+    margin-left: 2rem;
+}
+
+@media screen and (orientation:portrait) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card button {
+        margin: 2.5rem;
+        margin-bottom: 1rem;
+        width: auto;
+    }
+}
+
+.inner {
+    flex-shrink: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner #date {
+    align-self: flex-end;
+}
+
+#new * {
+    margin: 1rem;
+}
+
+#new {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#new .cnt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.card button,
+input {
+    padding: 1.5rem 2.5rem;
+    border: unset;
+    border-radius: 1.5rem;
+    color: #212121;
+    position: relative;
+    z-index: 1;
+    background: #e8e8e8;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+}
+
+.card button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.card button:hover {
+    color: #e8e8e8;
+}
+
+.card button:hover::before {
+    width: 100%;
+}
+
+#timer {
+    padding-top: 1rem;
+    color: rgb(0, 0, 0);
+    font-size: 6rem;
+    font-family: 'Roboto Mono', monospace;
+    word-spacing: -1.5rem;
+}
+
+#name-date {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#date {
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#times {
+    font-size: 3rem;
+}
+
+#name {
+    /* width: 100%; */
+    align-self: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 1rem;
+    background-image: linear-gradient(#ccc, #ccc);
+    background-size: 95% 2px;
+    background-position: bottom center;
+    background-size: 70% 2px;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
