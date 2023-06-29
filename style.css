@@ -1,11 +1,14 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
-/* need a monospace for clock */
+
 
 html {
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     background-color: #F9F1F8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
 }
 
 body {
@@ -103,7 +106,7 @@ input {
     color: #212121;
     position: relative;
     z-index: 1;
-    background: #e8e8e8;
+    background: #e8e8e800;
     font-weight: 1000;
     font-size: 17px;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
